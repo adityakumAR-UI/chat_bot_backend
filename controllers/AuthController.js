@@ -5,9 +5,7 @@ const {
 } = require("../services/authService");
 
 
-// ==========================================
-// GOOGLE LOGIN
-// ==========================================
+
 
 const googleLogin = async (req, res) => {
 
@@ -24,9 +22,7 @@ const googleLogin = async (req, res) => {
         }
 
 
-        // ------------------------------------------
-        // VERIFY GOOGLE ID TOKEN
-        // ------------------------------------------
+
 
         const googleUser =
             await verifyGoogleToken(
@@ -42,9 +38,6 @@ const googleLogin = async (req, res) => {
         }
 
 
-        // ------------------------------------------
-        // FIND OR CREATE USER
-        // ------------------------------------------
 
         const user =
             await findOrCreateUser(
@@ -52,17 +45,12 @@ const googleLogin = async (req, res) => {
             );
 
 
-        // ------------------------------------------
-        // CREATE APPLICATION JWT
-        // ------------------------------------------
 
         const token =
             createToken(user);
 
 
-        // ------------------------------------------
-        // SEND RESPONSE
-        // ------------------------------------------
+     
 
         res.json({
 
