@@ -2,9 +2,7 @@ const Conversation = require("../models/Conversation");
 const Message = require("../models/Message");
 
 
-// ==========================================
-// GET ALL CONVERSATIONS
-// ==========================================
+
 
 const getConversations = async (req, res) => {
     try {
@@ -33,9 +31,7 @@ const getConversations = async (req, res) => {
 };
 
 
-// ==========================================
-// GET MESSAGES OF A CONVERSATION
-// ==========================================
+
 
 const getMessages = async (req, res) => {
     try {
